@@ -562,16 +562,13 @@ export default function Home() {
       {/* ── BOOK ── */}
       <section className="bg-brand-mid py-24 px-6">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-14 items-center">
-          {/* Book cover placeholder — replace with <Image src="..." /> when available */}
-          <div className="relative mx-auto w-64 aspect-[2/3] rounded-xl overflow-hidden bg-gradient-to-br from-[#1a1206] to-[#0d0a04] shadow-2xl shadow-black/50 flex items-center justify-center border border-white/5">
-            <div className="text-center px-6">
-              <p className="font-display italic text-white text-3xl font-bold leading-tight mb-2">
-                One Sheep
-              </p>
-              <div className="w-8 h-px bg-white/30 mx-auto my-3" />
-              <p className="text-white/40 text-xs tracking-widest uppercase">Tiffany Charles</p>
-            </div>
-            <div className="absolute bottom-0 left-0 right-0 h-1 bg-brand-gold" />
+          <div className="relative mx-auto w-64 aspect-[2/3] rounded-xl overflow-hidden shadow-2xl shadow-black/50">
+            <Image
+              src="/onesheep.avif"
+              alt="One Sheep book cover"
+              fill
+              className="object-cover"
+            />
           </div>
 
           <div>
