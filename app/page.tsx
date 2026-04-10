@@ -452,6 +452,11 @@ export default function Home() {
                 title: 'Be Transformed',
                 body: 'Not just touched, but changed.',
               },
+              {
+                letter: 'L',
+                title: 'Be Loving',
+                body: 'Reflect Christ in how you treat others.',
+              },
             ].map((item, i) => (
               <div
                 key={i}
