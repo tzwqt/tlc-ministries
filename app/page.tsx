@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Nav from '@/app/components/Nav'
 import ContactForm from '@/app/components/ContactForm'
 
@@ -186,8 +187,14 @@ export default function Home() {
       {/* ── MEET TIFFANY ── */}
       <section className="bg-brand-mid py-24 px-6">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-14 items-center">
-          {/* Photo placeholder — replace with <Image src="..." /> when available */}
           <div className="relative aspect-[4/5] rounded-xl overflow-hidden bg-brand-card flex items-end">
+            <Image
+              src="/TiffChar.avif"
+              alt="Tiffany Charles"
+              fill
+              style={{ objectFit: 'cover', objectPosition: 'top' }}
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
             <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 to-transparent" />
             <div className="relative p-6">
               <p className="font-display italic text-white/50 text-sm">Tiffany Charles</p>
