@@ -7,8 +7,6 @@ const navLinks = [
   { href: '/courses', label: 'Online Courses' },
   { href: '/blog', label: 'Blog' },
   { href: '/packages', label: 'Packages' },
-  { href: '/services', label: 'Services' },
-  { href: '/beliefs', label: 'Beliefs' },
   { href: '/events', label: 'Events' },
   { href: '/give', label: 'Give' },
   { href: '/contact', label: 'Contact' },

@@ -11,8 +11,6 @@ const links = [
   { href: '/courses', label: 'Online Courses' },
   { href: '/packages', label: 'Packages' },
   { href: '/blog', label: 'Blog' },
-  { href: '/services', label: 'Services' },
-  { href: '/beliefs', label: 'Beliefs' },
   { href: '/events', label: 'Events' },
   { href: '/give', label: 'Give' },
   { href: '/contact', label: 'Contact' },
@@ -36,18 +34,18 @@ export default function Nav() {
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
         {/* LOGO */}
         <Link
           href="/"
-          className="font-display italic text-white font-semibold text-lg"
+          className="font-display italic text-white font-semibold text-lg shrink-0"
         >
           Be Real Global Ministry
         </Link>
 
         {/* DESKTOP */}
-        <div className="hidden md:flex items-center gap-7">
+        <div className="hidden lg:flex items-center gap-6">
           {links.map((l) => (
             <Link
               key={l.href}
@@ -60,7 +58,7 @@ export default function Nav() {
 
           <Link
             href="/contact"
-            className="bg-red-600 hover:bg-red-500 text-white text-sm px-5 py-2.5 rounded-full font-medium"
+            className="bg-brand-red hover:bg-brand-red-hover text-white text-sm px-5 py-2.5 rounded-full font-medium transition-colors"
           >
             Join Us
           </Link>
@@ -69,35 +67,34 @@ export default function Nav() {
         {/* MOBILE BUTTON */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden flex flex-col gap-1.5 p-1"
+          className="lg:hidden flex flex-col gap-1.5 p-1"
+          aria-label="Toggle menu"
         >
-          <span className={`w-6 h-0.5 bg-white ${open ? 'rotate-45 translate-y-2' : ''}`} />
-          <span className={`w-6 h-0.5 bg-white ${open ? 'opacity-0' : ''}`} />
-          <span className={`w-6 h-0.5 bg-white ${open ? '-rotate-45 -translate-y-2' : ''}`} />
+          <span className={`w-6 h-0.5 bg-white transition-transform ${open ? 'rotate-45 translate-y-2' : ''}`} />
+          <span className={`w-6 h-0.5 bg-white transition-opacity ${open ? 'opacity-0' : ''}`} />
+          <span className={`w-6 h-0.5 bg-white transition-transform ${open ? '-rotate-45 -translate-y-2' : ''}`} />
         </button>
       </div>
 
       {/* MOBILE MENU */}
-      <div className={`md:hidden overflow-hidden transition-all duration-300 ${
-        open ? 'max-h-96' : 'max-h-0'
+      <div className={`lg:hidden overflow-hidden transition-all duration-300 ${
+        open ? 'max-h-[32rem]' : 'max-h-0'
       }`}>
-        <div className="bg-black px-6 pb-6 flex flex-col border-t border-white/10">
-
+        <div className="bg-black/95 backdrop-blur-md px-6 pb-6 flex flex-col border-t border-white/10">
           {links.map((l) => (
             <Link
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="text-white/70 py-3 border-b border-white/10"
+              className="text-white/70 py-3 border-b border-white/10 hover:text-white transition-colors"
             >
               {l.label}
             </Link>
           ))}
-
           <Link
             href="/contact"
             onClick={() => setOpen(false)}
-            className="bg-red-600 text-white text-center py-3 rounded-full mt-4"
+            className="bg-brand-red text-white text-center py-3 rounded-full mt-4 font-medium"
           >
             Join Us
           </Link>
