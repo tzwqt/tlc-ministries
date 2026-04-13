@@ -211,33 +211,77 @@ export default function About() {
         </div>
       </section>
 
-      {/* ───────── MISSION & VISION ───────── */}
+      {/* ───────── BE REAL ───────── */}
       <section className="bg-brand-dark py-24 px-6">
         <div className="max-w-5xl mx-auto">
+
+          {/* INTRO */}
           <div className="text-center mb-16">
-            <SectionLabel>Why We Exist</SectionLabel>
-            <h2 className="text-4xl md:text-5xl font-bold italic">
-              Mission &amp; Vision
+            <SectionLabel>The Movement</SectionLabel>
+            <h2 className="text-4xl md:text-5xl font-black italic">
+              Be <span className="text-brand-gold">Real</span>
             </h2>
             <Divider />
+            <p className="text-white/60 max-w-2xl mx-auto leading-8">
+              Out of consecration and obedience, the Lord entrusted Tiffany with a movement called Be Real.
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          {/* ORIGIN */}
+          <div className="bg-brand-card border border-white/6 rounded-2xl p-8 md:p-10 mb-8 text-center">
+            <p className="text-white/70 leading-8 max-w-3xl mx-auto">
+              For the past three years, she has stewarded an annual spiritual focus — studying
+              deeply with her discipleship community throughout the year. What begins in prayer,
+              study, and refinement culminates in an end-of-year conference marked by healing,
+              deliverance, clarity, and spiritual activation.
+            </p>
+          </div>
+
+          {/* MISSION + VISION */}
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
             <div className="bg-brand-card border border-white/6 rounded-2xl p-8">
-              <p className="text-brand-gold text-xs tracking-[0.35em] uppercase mb-4">Our Mission</p>
-              <p className="text-white/80 text-lg font-display italic leading-8">
-                &ldquo;To lead people into deep, authentic relationship with Jesus Christ through
-                truth, healing, and discipleship — transforming lives from the inside out.&rdquo;
+              <p className="text-brand-gold text-xs tracking-[0.35em] uppercase mb-5">Mission</p>
+              <p className="text-white/75 leading-8 text-sm mb-4">
+                Be Real exists to create transformative encounters with the Lord that extend far
+                beyond a moment. The ministry is designed to redirect lives toward the heart of
+                God through authenticity, vulnerability, and truth.
+              </p>
+              <p className="text-white/55 leading-8 text-sm">
+                In carefully cultivated environments, individuals are invited into honest surrender.
+                There, the Holy Spirit works deeply — bringing healing to the soul, freedom to the
+                bound, and restoration to identity. The goal is not inspiration alone, but lasting
+                conformity into the image of Christ.
               </p>
             </div>
+
             <div className="bg-brand-card border border-white/6 rounded-2xl p-8">
-              <p className="text-brand-gold text-xs tracking-[0.35em] uppercase mb-4">Our Vision</p>
-              <p className="text-white/80 text-lg font-display italic leading-8">
-                &ldquo;To raise a generation of believers who are unapologetically real with God
-                and with each other — set apart, transformed, and fully alive in Christ.&rdquo;
+              <p className="text-brand-gold text-xs tracking-[0.35em] uppercase mb-5">Vision</p>
+              <p className="font-display italic text-white/80 text-lg leading-8 mb-5">
+                Be Real is a breaker movement.
+              </p>
+              <p className="text-white/55 leading-8 text-sm mb-4">
+                It calls believers to walk in power, operate in glory, and move through the
+                finished work of Jesus Christ. Rooted in consecration and covenant, the ministry
+                raises men and women who confront generational cycles, rise from adversity, and
+                carry spiritual authority with humility and reverence.
+              </p>
+              <p className="text-white/40 text-xs italic leading-6">
+                Power flows through surrender, and glory rests on those who remain anchored
+                in the blood of Christ.
               </p>
             </div>
           </div>
+
+          {/* TAGLINE BANNER */}
+          <div className="bg-brand-red rounded-2xl p-8 text-center">
+            <p className="font-display italic text-xl md:text-2xl text-white leading-relaxed mb-3">
+              We walk in truth, confront with love, and equip believers to abide firmly in Christ.
+            </p>
+            <p className="text-white/70 text-sm tracking-wide">
+              Where truth is lived, love leads correction, and lives are anchored in Christ.
+            </p>
+          </div>
+
         </div>
       </section>
 
