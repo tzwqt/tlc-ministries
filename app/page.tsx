@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Nav from "@/app/components/Nav";
 import ContactForm from "@/app/components/ContactForm";
 
 // ─────────────────────────────
@@ -50,8 +49,6 @@ const SectionLabel = ({ children }: { children: React.ReactNode }) => (
 export default function Home() {
   return (
     <div className="bg-brand-dark text-white font-sans">
-
-      <Nav />
 
       {/* ───────── HERO (CINEMATIC) ───────── */}
       <section className="relative min-h-screen flex items-center justify-center text-center overflow-hidden px-6">
@@ -220,10 +217,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ───────── FOOTER ───────── */}
-      <footer className="bg-brand-mid py-10 text-center text-white/40 text-sm">
-        © {new Date().getFullYear()} Be Real Global Ministry
-      </footer>
     </div>
   );
 }

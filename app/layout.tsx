@@ -3,8 +3,8 @@ import { Geist } from "next/font/google";
 import { Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-import Navbar from "@/components/Nav";
-import Footer from "@/components/Footer";
+import Navbar from "@/app/components/Nav";
+import Footer from "@/app/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,13 +29,13 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${geistSans.variable} ${playfair.variable}`}>
-      <body className="antialiased bg-white text-black flex flex-col min-h-screen">
-        
+      <body className="antialiased bg-brand-dark text-white flex flex-col min-h-screen">
+
         {/* GLOBAL NAVBAR */}
         <Navbar />
 
         {/* PAGE CONTENT */}
-        <main className="flex-1 pt-20">
+        <main className="flex-1">
           {children}
         </main>
 
