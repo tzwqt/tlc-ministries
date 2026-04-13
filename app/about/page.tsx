@@ -15,6 +15,16 @@ const SectionLabel = ({ children }: { children: React.ReactNode }) => (
   </p>
 )
 
+const ministryRoles = [
+  "Marriage Ministry & Retreat Leadership",
+  "Women's Discipleship",
+  "Prison Ministry",
+  "Intercessory Prayer Leadership",
+  "Prophetic Team Coordination",
+  "Deliverance & Inner Healing Oversight",
+  "Private Ministry Counseling",
+]
+
 const pillars = [
   {
     title: "Truth",
@@ -54,44 +64,149 @@ export default function About() {
         </div>
       </section>
 
-      {/* ───────── FOUNDER ───────── */}
+      {/* ───────── MEET TIFFANY ───────── */}
       <section className="bg-brand-mid py-24 px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-center">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-start">
 
-          <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
-            <Image
-              src="/TiffChar.avif"
-              alt="Tiffany Charles"
-              fill
-              className="object-cover"
-            />
+          {/* PHOTO */}
+          <div className="sticky top-28">
+            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
+              <Image
+                src="/TiffChar.avif"
+                alt="Tiffany Charles"
+                fill
+                className="object-cover"
+              />
+            </div>
+
+            {/* TITLE BADGES */}
+            <div className="flex flex-wrap gap-2 mt-5">
+              {["Visionary Leader", "Discipler", "Builder of People"].map((t) => (
+                <span
+                  key={t}
+                  className="bg-brand-card border border-white/10 text-white/60 text-xs px-4 py-1.5 rounded-full"
+                >
+                  {t}
+                </span>
+              ))}
+            </div>
           </div>
 
+          {/* BIO */}
           <div>
             <SectionLabel>Founder &amp; Leader</SectionLabel>
-            <h2 className="text-4xl md:text-5xl font-bold italic mb-2">
-              Tiffany Charles
+            <h2 className="text-4xl md:text-5xl font-black italic leading-tight mb-2">
+              Meet Tiffany<br />
+              <span className="text-brand-gold">Charles</span>
+            </h2>
+
+            <Divider />
+
+            {/* PERSONAL QUOTE */}
+            <blockquote className="border-l-2 border-brand-gold pl-5 mb-8">
+              <p className="font-display italic text-white/75 leading-8">
+                &ldquo;I desire to do all I can while I can, making a difference and leaving
+                a legacy that will impact generations to come for the glory of the Lord.&rdquo;
+              </p>
+            </blockquote>
+
+            <p className="text-white/60 text-sm mb-6 leading-7">
+              For me, success is defined in seven words:
+            </p>
+
+            <p className="font-display italic text-xl text-brand-gold mb-8">
+              &ldquo;Well done, thy good and faithful servant.&rdquo;
+            </p>
+
+            <p className="text-white/70 leading-8 mb-5">
+              Tiffany Charles is a transformational leader whose life&apos;s work sits at the
+              intersection of education, discipleship, and spiritual formation. Originally
+              from Myrtle Beach, South Carolina, and now rooted in Houston, Texas, Tiffany
+              carries a distinctive blend of executive leadership, pastoral care, and
+              prophetic insight.
+            </p>
+
+            <p className="text-white/70 leading-8">
+              Her calling is clear: to cultivate environments where people encounter God
+              deeply, grow intentionally, and walk boldly in their divine identity.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ───────── EDUCATION & LEADERSHIP ───────── */}
+      <section className="bg-brand-dark py-24 px-6">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-14">
+            <SectionLabel>Background</SectionLabel>
+            <h2 className="text-4xl md:text-5xl font-bold italic">
+              Education &amp; Executive Leadership
             </h2>
             <Divider />
-            <p className="text-white/70 leading-8 mb-5">
-              Tiffany Charles is the founder of Be Real Global Ministry — a woman whose life
-              is a testament that God does not waste pain. Her journey through brokenness,
-              identity crisis, and radical encounter with Jesus birthed a burning desire to
-              see others walk free.
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-brand-card border border-white/6 rounded-2xl p-8">
+              <p className="text-brand-gold text-xs tracking-[0.35em] uppercase mb-5">Academic</p>
+              <ul className="space-y-4 text-white/70 text-sm leading-7">
+                <li className="flex gap-3">
+                  <span className="text-brand-gold mt-1">—</span>
+                  Associate&apos;s Degree in Interdisciplinary Studies <em className="text-white/40">(Magna Cum Laude)</em>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-brand-gold mt-1">—</span>
+                  Continued studies in Educational Studies
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-brand-gold mt-1">—</span>
+                  Master of Business Administration (MBA)
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-brand-card border border-white/6 rounded-2xl p-8">
+              <p className="text-brand-gold text-xs tracking-[0.35em] uppercase mb-5">Professional</p>
+              <p className="text-white/70 text-sm leading-7">
+                Tiffany currently serves as <strong className="text-white">Director of Admissions</strong> at
+                Houston Christian University, overseeing recruitment strategy, leadership development,
+                and student engagement. With over a decade in higher education and events leadership,
+                she is known for building strong teams, cultivating meaningful relationships, and
+                guiding students through pivotal seasons of transition and purpose discovery.
+              </p>
+              <p className="text-white/50 text-sm mt-4 italic">
+                Her professional presence reflects precision, stewardship, and influence —
+                while her spiritual mantle carries depth and discernment.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ───────── MINISTRY HISTORY ───────── */}
+      <section className="bg-brand-mid py-24 px-6">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-14">
+            <SectionLabel>A Life Devoted</SectionLabel>
+            <h2 className="text-4xl md:text-5xl font-bold italic">
+              Ministry Since Age 21
+            </h2>
+            <Divider />
+            <p className="text-white/55 max-w-2xl mx-auto leading-8 text-sm">
+              Ministry has been the foundation of Tiffany&apos;s life since the age of 21.
+              Over the years, she has served in high-impact roles including:
             </p>
-            <p className="text-white/70 leading-8 mb-5">
-              With a heart for the real and the raw, Tiffany carries a prophetic and pastoral
-              anointing that cuts through religious pretense and invites people into authentic
-              relationship with God.
-            </p>
-            <p className="text-white/70 leading-8">
-              She preaches, teaches, and counsels with a conviction rooted in Scripture — and
-              her ministry has touched lives through prayer, deliverance, and the simple but
-              powerful message:{" "}
-              <em className="text-brand-gold">
-                be real with God, and He will be real with you.
-              </em>
-            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 gap-4">
+            {ministryRoles.map((role) => (
+              <div
+                key={role}
+                className="bg-brand-card border border-white/6 rounded-xl px-6 py-4 flex items-center gap-4"
+              >
+                <div className="w-1.5 h-1.5 bg-brand-gold rounded-full shrink-0" />
+                <p className="text-white/70 text-sm">{role}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
