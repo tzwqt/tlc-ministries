@@ -43,9 +43,13 @@ h1, h2, h3 {
   letter-spacing: -0.02em;
 }
 
-/* ─── GLOBAL ANIMATIONS ────────────────── */
+/* ─── GLOBAL TRANSITIONS ───────────────── */
 * {
-  transition: all 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out,
+              background-color 0.2s ease-in-out,
+              border-color 0.2s ease-in-out,
+              opacity 0.2s ease-in-out,
+              transform 0.2s ease-in-out;
 }
 
 /* ─── PREMIUM CARD STYLE ───────────────── */
@@ -78,4 +82,24 @@ h1, h2, h3 {
 .btn-outline:hover {
   background: var(--color-brand-gold);
   color: black;
+}
+
+/* ─── DECORATIVE PATTERNS ─────────────── */
+
+/*
+  Gold cross grid — applied to all dark section backgrounds.
+  Since Tailwind sets background-color and we set background-image,
+  these two properties stack without conflict.
+*/
+.bg-brand-dark,
+.bg-brand-mid,
+.bg-brand-red-dark {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Cpath d='M24 8v32M8 24h32' stroke='rgba(201%2C168%2C76%2C0.10)' stroke-width='1' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-size: 48px 48px;
+}
+
+/* White cross grid on red backgrounds */
+.bg-brand-red {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Cpath d='M24 8v32M8 24h32' stroke='rgba(255%2C255%2C255%2C0.08)' stroke-width='1' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-size: 48px 48px;
 }
