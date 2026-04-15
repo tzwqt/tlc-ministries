@@ -43,8 +43,10 @@ export default function ContactForm() {
     >
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
-          <label className={labelClass}>First Name</label>
+          <label htmlFor="firstName" className={labelClass}>First Name</label>
           <input
+            id="firstName"
+            name="firstName"
             type="text"
             required
             value={form.firstName}
@@ -53,8 +55,10 @@ export default function ContactForm() {
           />
         </div>
         <div>
-          <label className={labelClass}>Last Name</label>
+          <label htmlFor="lastName" className={labelClass}>Last Name</label>
           <input
+            id="lastName"
+            name="lastName"
             type="text"
             required
             value={form.lastName}
@@ -65,8 +69,10 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label className={labelClass}>Email</label>
+        <label htmlFor="email" className={labelClass}>Email</label>
         <input
+          id="email"
+          name="email"
           type="email"
           required
           value={form.email}
@@ -76,8 +82,10 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label className={labelClass}>What's on your heart?</label>
+        <label htmlFor="message" className={labelClass}>What's on your heart?</label>
         <textarea
+          id="message"
+          name="message"
           required
           rows={5}
           value={form.message}
