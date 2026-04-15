@@ -48,6 +48,7 @@ export default function ContactForm() {
             id="firstName"
             name="firstName"
             type="text"
+            autoComplete="given-name"
             required
             value={form.firstName}
             onChange={set('firstName')}
@@ -60,6 +61,7 @@ export default function ContactForm() {
             id="lastName"
             name="lastName"
             type="text"
+            autoComplete="family-name"
             required
             value={form.lastName}
             onChange={set('lastName')}
@@ -74,6 +76,7 @@ export default function ContactForm() {
           id="email"
           name="email"
           type="email"
+          autoComplete="email"
           required
           value={form.email}
           onChange={set('email')}
@@ -86,6 +89,7 @@ export default function ContactForm() {
         <textarea
           id="message"
           name="message"
+          autoComplete="off"
           required
           rows={5}
           value={form.message}

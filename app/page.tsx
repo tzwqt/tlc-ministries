@@ -43,7 +43,7 @@ export default function Home() {
       {/* ───────── HERO ───────── */}
       <section className="relative min-h-screen flex items-center justify-center text-center overflow-hidden px-6">
         <div className="absolute inset-0 bg-black">
-          <div className="absolute inset-0 bg-[url('/hero.jpg')] bg-cover bg-center opacity-40" />
+          <div className="absolute inset-0 bg-[url('/TiffChar.avif')] bg-cover bg-center opacity-40" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-brand-dark" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(200,16,46,0.30),transparent_65%)]" />
